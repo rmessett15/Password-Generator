@@ -1,9 +1,11 @@
+/* Universal selector - utilizing pseudo elements and box-sizing properties */
 *,
 *::before,
 *::after {
   box-sizing: border-box;
 }
 
+/* Both element and class selectors targeted */
 html,
 body,
 .wrapper {
@@ -12,17 +14,20 @@ body,
   padding: 0;
 }
 
+/* Element selector */
 body {
   font-family: sans-serif;
   background-color: #f9fbfd;
 }
 
+/* Class selector */
 .wrapper {
   padding-top: 30px;
   padding-left: 20px;
   padding-right: 20px;
 }
 
+/* Element selector */
 header {
   text-align: center;
   padding: 20px;
@@ -30,6 +35,7 @@ header {
   color: hsl(206, 17%, 28%);
 }
 
+/* Class selector */
 .card {
   background-color: hsl(0, 0%, 100%);
   border-radius: 5px;
@@ -42,6 +48,7 @@ header {
   padding: 30px 40px;
 }
 
+/* Class selector - utilizes pseudo elements */
 .card-header::after {
   content: " ";
   display: block;
@@ -50,14 +57,17 @@ header {
   height: 2px;
 }
 
+/* Class selector */
 .card-body {
   min-height: 100px;
 }
 
+/* Class selector */
 .card-footer {
   text-align: center;
 }
 
+/* Class selector - utilizes pseudo elements */
 .card-footer::before {
   content: " ";
   display: block;
@@ -66,12 +76,14 @@ header {
   height: 2px;
 }
 
+/* Class selector - utilizes pseudo elements */
 .card-footer::after {
   content: " ";
   display: block;
   clear: both;
 }
 
+/* Class selector- gives style to the generate password button */
 .btn {
   border: none;
   background-color: hsl(360, 91%, 36%);
@@ -88,15 +100,18 @@ header {
   cursor: pointer;
 }
 
+/* Element selector */
 button[disabled] {
   cursor: default;
   background: #c0c7cf;
 }
 
+/* Class selector */
 .float-right {
   float: right;
 }
 
+/* Id selector */
 #password {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -118,6 +133,7 @@ button[disabled] {
   overflow: hidden;
 }
 
+/* Media querys - handle page responsiveness */
 @media (max-width: 690px) {
   .btn {
     font-size: 1rem;
