@@ -25,6 +25,10 @@ This project utilizes HTML, CSS, & JavaScript
 
 2. Open in VS Code. If you do not have VS code you must install it.
 
+## Credits
+
+Worked with a tutor (Mila Hose) to complete my JavaScript code.
+
 
 ## Features
 
