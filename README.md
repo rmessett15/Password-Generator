@@ -11,8 +11,8 @@ The motivation behind this project was to use JavaScript to build out a password
 https://rmessett15.github.io/Portfolio/
 
 ## Screenshot
-    
-![Portfolio](https://user-images.githubusercontent.com/120127903/219506859-7dbf874a-f168-4d0f-afc7-63e88f30650a.png)
+ 
+![password-generator-screenshot](https://user-images.githubusercontent.com/120127903/221250174-6e2763e9-61a5-43d4-9947-c364396f4158.png)
 
 ## Technologies Used
 
