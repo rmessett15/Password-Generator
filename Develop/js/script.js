@@ -8,7 +8,7 @@ var specialChar = "!@#$%^&[]{}?<>`~;:=+-/*";
 // GIVEN I need a new, secure password
 // WHEN I click the button to generate a password
 // Get references to the #generate element
-// Refers to the generate password button and makes it a variable so it can be selected below (line 87) with an addEventListener "click" 
+// Refers to the generate password button and makes it a variable so it can be selected below (line 87) with an addEventListener "click"
 var generateBtn = document.querySelector("#generate");
 
 // Defined getRandom function to be called on within lines 55-82
@@ -17,7 +17,7 @@ function getRandom(str) {
   return str[Math.floor(Math.random() * str.length)];
 }
 
-// Defined writePassword function 
+// Defined writePassword function
 // User inputs saved within this function
 // Empty string variables live within this function and are added to depending on user inputs
 function writePassword() {
@@ -25,7 +25,7 @@ function writePassword() {
   var password = "";
   var passwordOptions = "";
 
-  // passwordText variable uses a querySelector method to link to the class password within the HTML  
+  // passwordText variable uses a querySelector method to link to the class password within the HTML
   var passwordText = document.querySelector("#password");
 
   // Lines 32-47 are .confirm methods utilized to log boolean values of users choices
@@ -88,7 +88,7 @@ function writePassword() {
   }
 
   // For loop added which iterates over the passwordLength selected by the user
-  // getRandom function is then called again to randomize the no longer empty string variable passwordOptions and is then finalized and added to the password variable 
+  // getRandom function is then called again to randomize the no longer empty string variable passwordOptions and is then finalized and added to the password variable
   for (let i = password.length; i < passwordLength; i++) {
     password += getRandom(passwordOptions);
     console.log(password);
