@@ -8,7 +8,7 @@ The motivation behind this project was to use JavaScript to build out a password
 
 ## Live URL
 
-
+https://rmessett15.github.io/Password-Generator/
 
 ## Screenshot
  
@@ -20,8 +20,8 @@ This project utilizes HTML, CSS, & JavaScript
 
 ## Installation
 
-1. Clone the repo
-   git clone 
+1. Clone the repo:
+   git clone https://github.com/rmessett15/Password-Generator.git
 
 2. Open in VS Code. If you do not have VS code you must install it.
 
