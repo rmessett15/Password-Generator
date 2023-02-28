@@ -28,20 +28,26 @@ function writePassword() {
   // passwordText variable uses a querySelector method to link to the class password within the HTML
   var passwordText = document.querySelector("#password");
 
+  // Assigned variables
+  let lowercase;
+  let uppercase;
+  let numeric;
+  let specialCharacters;
+
   // Lines 32-47 are .confirm methods utilized to log boolean values of users choices
-  const lowercase = window.confirm(
+  lowercase = window.confirm(
     "Do you want to include lowercase characters in your password? Click Ok for Yes & Cancel for No"
   );
   console.log(lowercase);
-  const uppercase = window.confirm(
+  uppercase = window.confirm(
     "Do you want to include uppercase characters in your password? Click Ok for Yes & Cancel for No"
   );
   console.log(uppercase);
-  const numeric = window.confirm(
+  numeric = window.confirm(
     "Do you want to include numeric values in your password? Click Ok for Yes & Cancel for No"
   );
   console.log(numeric);
-  const specialCharacters = window.confirm(
+  specialCharacters = window.confirm(
     "Do you want to include special characters in your password? Click Ok for Yes & Cancel for No"
   );
   console.log(specialCharacters);
@@ -51,6 +57,37 @@ function writePassword() {
     window.prompt("Password Length (enter 8 - 128 characters)")
   );
   console.log(passwordLength);
+
+  // This is my assignment of false statements for when the user does not select any character options
+  const noCharSelected =
+    !lowercase && !uppercase && !numeric && !specialCharacters;
+
+  // This is my while loop (lines 66 - 90) which is in place for when the user does not select any character options & will re-prompt the user to choose at least one character type
+  while (noCharSelected) {
+    window.alert("Please select at least one character type");
+    lowercase = window.confirm(
+      "Do you want to include lowercase characters in your password? Click Ok for Yes & Cancel for No"
+    );
+    console.log(lowercase);
+    uppercase = window.confirm(
+      "Do you want to include uppercase characters in your password? Click Ok for Yes & Cancel for No"
+    );
+    console.log(uppercase);
+    numeric = window.confirm(
+      "Do you want to include numeric values in your password? Click Ok for Yes & Cancel for No"
+    );
+    console.log(numeric);
+    specialCharacters = window.confirm(
+      "Do you want to include special characters in your password? Click Ok for Yes & Cancel for No"
+    );
+    passwordLength = parseInt(
+      window.prompt("Password Length (enter 8 - 128 characters)")
+    );
+    // This break is here so that on the users "new" attempt (after failing to select any characters), any true boolean value returned from the variables below will break the while loop and give them a generated password
+    if (lowercase || uppercase || numeric || specialCharacters) {
+      break;
+    }
+  }
 
   // While loop utilized to ensure the user enters a number between 8 and 128. If number outside of the range is selected then a prompt shows them they have entered an invalid response
   while (passwordLength < 8 || passwordLength > 128 || isNaN(passwordLength)) {
